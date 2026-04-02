@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Projet WordPress – Module C741</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+          content="Référence apprenants : objectifs, consignes, jalons, évaluation et ressources pour le projet WordPress du module C741.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icons.css">
+</head>
+<body id="top">
+<a class="skip-link" tabindex="1" href="#contenu">Aller au contenu</a>
+<input type="checkbox" id="nav-toggle" class="nav-toggle" tabindex="-1" aria-hidden="true">
+<label for="nav-toggle" class="nav-toggle-label" aria-label="Ouvrir le menu" aria-hidden="true">Ouvrir le menu</label>
+
+<header class="main-header">
+    <div class="header-content">
+        <div class="header-logo">
+            <a href="#top" class="logo-link">
+                <div class="logo-text">
+                    <div class="logo-title">Projet WordPress</div>
+                    <p class="logo-subtitle">ESIG - Module C741</p>
+                </div>
+            </a>
+        </div>
+        <button type="button" class="burger-menu" aria-controls="sidebar-nav" aria-label="Ouvrir le menu"
+                aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+    </div>
+</header>
+
+<nav id="sidebar-nav" class="sidebar-nav" aria-label="Navigation des sections">
+    <div class="sidebar-content">
+        <ul class="sidebar-menu">
+            <li><a href="#concept" class="sidebar-link" data-section="concept" data-tooltip="Concept"><i
+                    data-lucide="lightbulb"></i> <span class="link-text">Concept</span></a></li>
+            <li><a href="#objectifs" class="sidebar-link" data-section="objectifs" data-tooltip="Objectifs"><i
+                    data-lucide="target"></i> <span class="link-text">Objectifs</span></a></li>
+            <li><a href="#a-rendre" class="sidebar-link" data-section="a-rendre" data-tooltip="À rendre"><i
+                    data-lucide="clipboard-list"></i> <span class="link-text">À rendre</span></a></li>
+            <li><a href="#exigences" class="sidebar-link" data-section="exigences" data-tooltip="Exigences"><i
+                    data-lucide="check-circle"></i> <span class="link-text">Exigences</span></a></li>
+            <li><a href="#planification" class="sidebar-link" data-section="planification" data-tooltip="Planification"><i
+                    data-lucide="calendar"></i> <span class="link-text">Planification</span></a></li>
+            <li><a href="#evaluation" class="sidebar-link" data-section="evaluation" data-tooltip="Évaluation"><i
+                    data-lucide="search"></i> <span class="link-text">Évaluation</span></a></li>
+            <li><a href="#support" class="sidebar-link" data-section="support" data-tooltip="Support & IA"><i
+                    data-lucide="message-circle"></i> <span class="link-text">Support & IA</span></a></li>
+            <li><a href="#checklist" class="sidebar-link" data-section="checklist" data-tooltip="Checklist"><i
+                    data-lucide="check-square"></i> <span class="link-text">Checklist</span></a></li>
+            <li class="sidebar-close-item"><a href="#" class="sidebar-link" data-close-menu="true"><i
+                    data-lucide="x"></i> <span class="link-text">Fermer le menu</span></a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="main-wrapper">
+
+    <main id="contenu" class="container">
+        <!-- ============================================================
+             SECTION 1 — HERO
+             ============================================================ -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="section-content">
+                <h1 id="hero-title" class="hero-title">
+                    Projet<br>
+                    <span class="highlight">WordPress</span>
+                </h1>
+
+                <ul class="hero-info">
+                    <li class="manual-icons">
+                        <i data-lucide="globe"></i>
+                        Site professionnel <strong>en ligne</strong>
+                    </li>
+                    <li class="manual-icons">
+                        <i data-lucide="clock"></i>
+                        <strong>6 séances</strong> en classe
+                    </li>
+                    <li class="manual-icons">
+                        <i data-lucide="presentation"></i>
+                        Présentation : <strong>28 mai</strong>
+                    </li>
+                    <li class="manual-icons">
+                        <i data-lucide="calendar-check"></i>
+                        Rendu : <strong>29 mai 23h59</strong>
+                    </li>
+                </ul>
+
+                <div class="hero-tasks">
+                    <h2>Ta mission</h2>
+                    <ul>
+                        <li class="manual-icons">
+                            <i data-lucide="layout"></i>
+                            <strong>Concevoir</strong> l'architecture d'un site professionnel
+                        </li>
+                        <li class="manual-icons">
+                            <i data-lucide="palette"></i>
+                            <strong>Personnaliser</strong> un thème WordPress
+                        </li>
+                        <li class="manual-icons">
+                            <i data-lucide="file-text"></i>
+                            <strong>Créer</strong> des contenus variés et soignés
+                        </li>
+                        <li class="manual-icons">
+                            <i data-lucide="smartphone"></i>
+                            <strong>Assurer</strong> un design responsive
+                        </li>
+                        <li class="manual-icons">
+                            <i data-lucide="zap"></i>
+                            <strong>Optimiser</strong> la performance et le cache
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#exigences" class="btn btn-primary">
+                        Voir les exigences
+                    </a>
+                    <a href="#evaluation" class="btn btn-secondary">
+                        Évaluation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 2 — CONCEPT
+             ============================================================ -->
+        <section id="concept" class="section-bg-primary">
+            <div class="section-content">
+                <h2 class="section-title">Concept du projet</h2>
+
+                <div class="grid cols-2">
+                    <article>
+                        <h3>Le principe</h3>
+                        <p>Créer un <strong>site web professionnel avec WordPress</strong> sur un sujet de ton choix. Le site doit être <strong>complet, soigné et mis en ligne</strong> sur un hébergement Infomaniak.</p>
+                        <p>Tu travailleras sur la <strong>conception</strong> (architecture, card sorting), le <strong>design</strong> (thème, charte graphique), les <strong>contenus</strong> et la <strong>performance</strong> du site.</p>
+                    </article>
+                    <article>
+                        <h3>Exemples de sujets</h3>
+                        <ul>
+                            <li>Portfolio personnel</li>
+                            <li>Site d'association ou de club</li>
+                            <li>Blog thématique (sport, cuisine, tech...)</li>
+                            <li>Site vitrine d'entreprise fictive</li>
+                            <li>Site événementiel</li>
+                            <li>... tout sujet approuvé par l'enseignant !</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 3 — OBJECTIFS
+             ============================================================ -->
+        <section id="objectifs" class="section-bg-secondary">
+            <div class="section-content">
+                <h2 class="section-title">Objectifs</h2>
+                <div class="grid cols-3">
+                    <div class="livrable-card">
+                        <div class="livrable-icon">
+                            <i data-lucide="layout" class="icon icon-xl"></i>
+                        </div>
+                        <h3>Architecture du site</h3>
+                        <p>Structurer l'information avec le <strong>card sorting</strong> et créer une navigation claire et logique</p>
+                    </div>
+                    <div class="livrable-card">
+                        <div class="livrable-icon">
+                            <i data-lucide="palette" class="icon icon-xl"></i>
+                        </div>
+                        <h3>Charte graphique</h3>
+                        <p>Choisir et appliquer une <strong>palette de couleurs</strong>, des polices et un style visuel cohérent</p>
+                    </div>
+                    <div class="livrable-card">
+                        <div class="livrable-icon">
+                            <i data-lucide="file-text" class="icon icon-xl"></i>
+                        </div>
+                        <h3>Contenus de qualité</h3>
+                        <p>Rédiger des textes variés, intégrer des <strong>images optimisées</strong> et structurer les pages</p>
+                    </div>
+                    <div class="livrable-card">
+                        <div class="livrable-icon">
+                            <i data-lucide="smartphone" class="icon icon-xl"></i>
+                        </div>
+                        <h3>Responsive design</h3>
+                        <p>Un site qui s'adapte parfaitement à tous les <strong>écrans</strong> : mobile, tablette, desktop</p>
+                    </div>
+                    <div class="livrable-card">
+                        <div class="livrable-icon">
+                            <i data-lucide="gauge" class="icon icon-xl"></i>
+                        </div>
+                        <h3>Performance</h3>
+                        <p>Tester avec <strong>Lighthouse</strong> et optimiser les temps de chargement</p>
+                    </div>
+                    <div class="livrable-card">
+                        <div class="livrable-icon">
+                            <i data-lucide="shield-check" class="icon icon-xl"></i>
+                        </div>
+                        <h3>UX et ergonomie</h3>
+                        <p>Appliquer les <strong>règles de design</strong> et d'expérience utilisateur vues en cours</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 4 — À RENDRE
+             ============================================================ -->
+        <section id="a-rendre" class="section-bg-primary">
+            <div class="section-content">
+                <h2 class="section-title">À rendre</h2>
+                <div class="grid cols-2">
+                    <article>
+                        <h3>Site WordPress en ligne</h3>
+                        <p>Ton site doit être <strong>accessible en ligne</strong> via l'hébergement <strong>Infomaniak</strong>.</p>
+                        <ul>
+                            <li>WordPress installé et configuré</li>
+                            <li>Thème personnalisé (pas le thème par défaut)</li>
+                            <li>Minimum <strong>5 pages</strong> avec contenu réel</li>
+                            <li>Menu de navigation fonctionnel</li>
+                            <li>Au moins <strong>1 formulaire</strong> de contact</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Présentation le 28 mai</h3>
+                        <p>Chaque élève présente son site en <strong>5 minutes</strong> devant la classe :</p>
+                        <ul>
+                            <li>Montrer le site en direct</li>
+                            <li>Expliquer les choix de design et d'architecture</li>
+                            <li>Présenter les résultats Lighthouse</li>
+                            <li>Montrer le responsive (mobile + desktop)</li>
+                        </ul>
+                        <p>Corrections possibles jusqu'au <strong>29 mai 23h59</strong>.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 5 — EXIGENCES
+             ============================================================ -->
+        <section id="exigences" class="section-bg-secondary">
+            <div class="section-content">
+                <h2 class="section-title">Exigences</h2>
+
+                <div class="grid cols-3">
+                    <article>
+                        <h3>Contenus</h3>
+                        <ul>
+                            <li>Minimum <strong>5 pages</strong> avec contenu réel</li>
+                            <li>Textes variés : paragraphes, listes, citations</li>
+                            <li>Images optimisées (taille et poids)</li>
+                            <li>Au moins <strong>1 formulaire</strong> fonctionnel</li>
+                            <li>Contenus originaux (pas de Lorem Ipsum)</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Design</h3>
+                        <ul>
+                            <li><strong>Thème personnalisé</strong> (pas le défaut)</li>
+                            <li>Palette de couleurs <strong>cohérente</strong></li>
+                            <li>Typographie soignée et lisible</li>
+                            <li>Mise en page <strong>responsive</strong></li>
+                            <li>Respect des <strong>règles UX</strong> vues en cours</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Performance</h3>
+                        <ul>
+                            <li>Score <strong>Lighthouse &ge; 80</strong> (performance)</li>
+                            <li><strong>Plugin de cache</strong> activé et configuré</li>
+                            <li>Images compressées</li>
+                            <li>Pas de plugins inutiles</li>
+                            <li>Temps de chargement raisonnable</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <h3 class="section-title" style="margin-top: var(--spacing-2xl);">Bonus</h3>
+                <div class="grid cols-2">
+                    <article>
+                        <h3>Fonctionnalités bonus <span class="badge-bonus">+points</span></h3>
+                        <ul>
+                            <li><i data-lucide="lock" class="icon icon-sm"></i> HTTPS activé (certificat SSL) <span class="badge-bonus">+1 pt</span></li>
+                            <li><i data-lucide="search" class="icon icon-sm"></i> SEO optimisé (titres, meta, sitemap) <span class="badge-bonus">+1 pt</span></li>
+                            <li><i data-lucide="accessibility" class="icon icon-sm"></i> Accessibilité avancée (WCAG) <span class="badge-bonus">+1 pt</span></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 6 — PLANIFICATION
+             ============================================================ -->
+        <section id="planification" class="section-bg-primary">
+            <div class="section-content">
+                <h2 class="section-title">Planification</h2>
+
+                <ol class="timeline">
+                    <li class="timeline-item">
+                        <div class="timeline-marker"><i data-lucide="lightbulb" class="icon"></i></div>
+                        <span class="timeline-date">2 avril — Séance 1</span>
+                        <div class="timeline-card">
+                            <h3>Architecture &amp; démarrage</h3>
+                            <ul>
+                                <li>Finaliser le card sorting → sitemap du site</li>
+                                <li>Choisir et installer un thème WordPress</li>
+                                <li>Créer toutes les pages et configurer le menu</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-marker"><i data-lucide="alert-triangle" class="icon"></i></div>
+                        <span class="timeline-date">Vacances de Pâques</span>
+                        <div class="timeline-card">
+                            <h3>Devoir obligatoire</h3>
+                            <ul>
+                                <li><strong>Rédiger le contenu</strong> de toutes les pages</li>
+                                <li>Préparer et optimiser les <strong>images</strong></li>
+                                <li>Sans ce travail, les séances suivantes seront insuffisantes</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-marker"><i data-lucide="file-text" class="icon"></i></div>
+                        <span class="timeline-date">23 avril — Séance 2</span>
+                        <div class="timeline-card">
+                            <h3>Contenu &amp; personnalisation</h3>
+                            <ul>
+                                <li>Intégrer tous les contenus et médias</li>
+                                <li>Personnaliser le thème (couleurs, logo, charte)</li>
+                                <li>Vérifier le responsive (mobile + desktop)</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-marker"><i data-lucide="paintbrush" class="icon"></i></div>
+                        <span class="timeline-date">30 avril — Séance 3</span>
+                        <div class="timeline-card">
+                            <h3>Finitions design &amp; mise en ligne</h3>
+                            <ul>
+                                <li>Finitions mise en forme et design</li>
+                                <li>Déploiement sur Infomaniak</li>
+                                <li>Premiers tests Lighthouse</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-marker"><i data-lucide="gauge" class="icon"></i></div>
+                        <span class="timeline-date">7 mai — Séance 4</span>
+                        <div class="timeline-card">
+                            <h3>Performance &amp; cache</h3>
+                            <ul>
+                                <li>Installer et configurer un plugin de <strong>cache</strong></li>
+                                <li>Optimiser les images et la performance</li>
+                                <li>Viser un score Lighthouse &ge; 80</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-marker"><i data-lucide="wrench" class="icon"></i></div>
+                        <span class="timeline-date">21 mai — Séance 5</span>
+                        <div class="timeline-card">
+                            <h3>Dernière séance de travail</h3>
+                            <ul>
+                                <li>Tests finaux et corrections</li>
+                                <li>Vérification de tous les critères (checklist)</li>
+                                <li>Préparation de la présentation</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-marker"><i data-lucide="presentation" class="icon"></i></div>
+                        <span class="timeline-date">28 mai — Séance 6</span>
+                        <div class="timeline-card">
+                            <h3>Présentations</h3>
+                            <ul>
+                                <li>Présentation du site devant la classe (5 min/élève)</li>
+                                <li>Démonstration en direct</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-marker"><i data-lucide="calendar-check" class="icon"></i></div>
+                        <span class="timeline-date">29 mai — 23h59</span>
+                        <div class="timeline-card">
+                            <h3>Rendu final</h3>
+                            <ul>
+                                <li>Site en ligne sur Infomaniak</li>
+                                <li>Dernières corrections après la présentation</li>
+                                <li>URL du site communiquée à l'enseignant</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 7 — ÉVALUATION
+             ============================================================ -->
+        <section id="evaluation" class="section-bg-secondary">
+            <div class="section-content">
+                <h2 class="section-title">Évaluation</h2>
+
+                <div class="grid cols-2">
+                    <article>
+                        <h3>Grille d'évaluation (20 pts)</h3>
+                        <div class="table-responsive" tabindex="0" role="region" aria-label="Grille d'évaluation du projet">
+                            <table class="evaluation-table">
+                                <thead>
+                                <tr>
+                                    <th>Critère</th>
+                                    <th>Pts</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr><td colspan="2"><strong>Contenus</strong></td></tr>
+                                <tr><td>Contenus variés et suffisants</td><td>4</td></tr>
+                                <tr><td>Mise en forme soignée</td><td>3</td></tr>
+                                <tr><td colspan="2"><strong>Design &amp; UX</strong></td></tr>
+                                <tr><td>Respect de la charte graphique</td><td>3</td></tr>
+                                <tr><td>Respect des règles UX et design</td><td>3</td></tr>
+                                <tr><td>Responsive design (mobile + desktop)</td><td>3</td></tr>
+                                <tr><td colspan="2"><strong>Performance</strong></td></tr>
+                                <tr><td>Tests de performance réalisés (Lighthouse)</td><td>2</td></tr>
+                                <tr><td>Système de cache implémenté</td><td>2</td></tr>
+                                <tr><td colspan="2"><strong>Bonus</strong></td></tr>
+                                <tr><td>HTTPS / certificat SSL</td><td>+1</td></tr>
+                                <tr><td>SEO optimisé</td><td>+1</td></tr>
+                                <tr><td>Accessibilité avancée</td><td>+1</td></tr>
+                                <tr><td><strong>Total</strong></td><td><strong>20 (+3)</strong></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                    <article>
+                        <h3>Présentation (28 mai)</h3>
+                        <p>La présentation fait partie de l'évaluation. Chaque élève dispose de <strong>5 minutes</strong> pour :</p>
+                        <ul>
+                            <li>Montrer son site <strong>en direct</strong></li>
+                            <li>Expliquer ses choix (thème, couleurs, architecture)</li>
+                            <li>Montrer le <strong>responsive</strong> (redimensionner le navigateur)</li>
+                            <li>Présenter les résultats <strong>Lighthouse</strong></li>
+                        </ul>
+                        <h4>Ce qui est évalué</h4>
+                        <ul>
+                            <li>La qualité du <strong>résultat final</strong>, pas la quantité</li>
+                            <li>La <strong>cohérence</strong> entre le design et le contenu</li>
+                            <li>Le <strong>soin</strong> apporté aux détails</li>
+                            <li>La capacité à <strong>expliquer</strong> ses choix</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 8 — SUPPORT & IA
+             ============================================================ -->
+        <section id="support" class="section-bg-primary">
+            <div class="section-content">
+                <h2 class="section-title">Support & IA</h2>
+
+                <div class="grid cols-2">
+                    <article>
+                        <h3>Aide disponible</h3>
+                        <ul>
+                            <li><strong>En classe</strong> : questions à l'enseignant pendant les séances</li>
+                            <li><strong>devjs.ch</strong> : section « Préparer un projet web » (card sorting, design, UX)</li>
+                            <li><strong>WordPress.org</strong> : documentation officielle</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Utilisation de l'IA</h3>
+                        <p>L'IA (ChatGPT, Claude, Copilot...) est <strong>autorisée</strong> sous conditions :</p>
+                        <ul>
+                            <li>Tu dois comprendre <strong>100%</strong> des choix de ton site</li>
+                            <li>Tu dois pouvoir <strong>expliquer</strong> chaque décision de design</li>
+                            <li>L'IA peut aider pour les textes, mais le <strong>résultat doit être personnel</strong></li>
+                            <li>La présentation vérifiera ta compréhension réelle</li>
+                        </ul>
+                        <p><strong>Un site généré sans compréhension = 0 points.</strong></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 9 — CHECKLIST
+             ============================================================ -->
+        <section id="checklist" class="section-bg-secondary">
+            <div class="section-content">
+                <h2 class="section-title">Checklist d'auto-évaluation</h2>
+                <p style="text-align:center;margin-bottom:var(--spacing-lg);">Coche chaque item au fur et à mesure. Ta progression est sauvegardée automatiquement.</p>
+
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progression de la checklist">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <p class="progress-text" id="progress-text">0% complété</p>
+
+                <div class="grid cols-2">
+                    <!-- Contenus -->
+                    <div class="card checklist-group">
+                        <h3>Contenus</h3>
+                        <ul class="checklist">
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-pages" class="checklist-checkbox">
+                                <label for="check-pages">Minimum 5 pages avec contenu réel</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-texts" class="checklist-checkbox">
+                                <label for="check-texts">Textes variés (paragraphes, listes, citations)</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-images" class="checklist-checkbox">
+                                <label for="check-images">Images optimisées et pertinentes</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-form" class="checklist-checkbox">
+                                <label for="check-form">Formulaire de contact fonctionnel</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-menu" class="checklist-checkbox">
+                                <label for="check-menu">Menu de navigation clair et complet</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Design -->
+                    <div class="card checklist-group">
+                        <h3>Design &amp; UX</h3>
+                        <ul class="checklist">
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-theme" class="checklist-checkbox">
+                                <label for="check-theme">Thème personnalisé (pas le thème par défaut)</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-colors" class="checklist-checkbox">
+                                <label for="check-colors">Palette de couleurs cohérente</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-typo" class="checklist-checkbox">
+                                <label for="check-typo">Typographie lisible et harmonieuse</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-responsive" class="checklist-checkbox">
+                                <label for="check-responsive">Responsive : mobile + tablette + desktop</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-ux" class="checklist-checkbox">
+                                <label for="check-ux">Règles UX respectées (navigation, hiérarchie)</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Performance -->
+                    <div class="card checklist-group">
+                        <h3>Performance</h3>
+                        <ul class="checklist">
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-lighthouse" class="checklist-checkbox">
+                                <label for="check-lighthouse">Test Lighthouse réalisé (score &ge; 80)</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-cache" class="checklist-checkbox">
+                                <label for="check-cache">Plugin de cache installé et configuré</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-img-optim" class="checklist-checkbox">
+                                <label for="check-img-optim">Images compressées (pas de fichiers &gt; 500 Ko)</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-plugins" class="checklist-checkbox">
+                                <label for="check-plugins">Pas de plugins inutiles ou inactifs</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Préparation -->
+                    <div class="card checklist-group">
+                        <h3>Préparation</h3>
+                        <ul class="checklist">
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-online" class="checklist-checkbox">
+                                <label for="check-online">Site en ligne sur Infomaniak</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-all-pages" class="checklist-checkbox">
+                                <label for="check-all-pages">Toutes les pages vérifiées (liens, images)</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-mobile-test" class="checklist-checkbox">
+                                <label for="check-mobile-test">Testé sur un vrai smartphone</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="check-presentation" class="checklist-checkbox">
+                                <label for="check-presentation">Présentation préparée (5 min)</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mini-footer">
+        <p>Module C741 — Projet interdisciplinaire (CMS) — ESIG 2025-2026</p>
+        <p>Enseignant : Steve Fallet (SFA)</p>
+    </footer>
+
+</div>
+
+<script src="js/lucide.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

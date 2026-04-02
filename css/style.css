@@ -1,0 +1,2501 @@
+/* ========================================
+   MODULE C741 - PROJET WORDPRESS
+   Styles principaux - ESIG Suisse
+
+   Palette WordPress (bleu professionnel)
+
+   RÈGLES D'USAGE :
+   - #1E3A5F : Structure (navigation, titres, barres) — bleu marine
+   - #0073AA : Accent UNIQUEMENT (boutons, validation, focus) — bleu WordPress
+   - #F0F5FA : Fond clair — bleu très pâle
+   - #21759B : Texte secondaire, métadonnées — bleu moyen
+   - #0F172A : Texte principal fort — slate
+   - #FFD966 : Highlight (badges, bonus) — gold
+   ======================================== */
+
+/* Smooth scrolling pour la navigation par ancres */
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    /* Couleur principale = STRUCTURE (navigation, titres, barres) */
+    --color-primary: #1E3A5F;
+    --color-primary-light: #2B5080;
+    --color-primary-very-light: #E0EAF4;
+    --color-primary-dark: #1E3A5F;
+    --color-primary-darker: #0F172A;
+
+    /* Couleur d'accent = INTERACTION UNIQUEMENT (boutons, validation, focus) */
+    --color-accent: #0073AA;
+    --color-accent-light: #66B3D9;
+    --color-accent-dark: #005A87;
+
+    /* Neutres */
+    --color-dark: #0F172A;
+    --color-secondary: #21759B;
+    --color-success: #46B450;
+    --color-warning: #FFD966;
+    --color-error: #DC2626;
+
+    /* Palette grise-bleue WordPress */
+    --color-gray-50: #F0F5FA;
+    --color-gray-100: #E0EAF4;
+    --color-gray-200: #C8D8E8;
+    --color-gray-300: #A0B8D0;
+    --color-gray-400: #6B8EAE;
+    --color-gray-500: #4A6E8E;
+    --color-gray-600: #3A5670;
+    --color-gray-700: #2B5080;
+    --color-gray-800: #1E3A5F;
+    --color-gray-900: #0F172A;
+
+    /* Couleurs neutres */
+    --color-white: #FFFFFF;
+    --color-text-primary: #0F172A;
+    --color-text: #0F172A;
+    --color-text-light: #21759B;
+    --color-bg-light: #F0F5FA;
+    --color-bg-medium: #E0EAF4;
+    --color-bg-primary: var(--color-white);
+    --color-bg-secondary: var(--color-bg-light);
+
+    /* Couleurs de bordures */
+    --color-border-light: #C8D8E8;
+    --color-border-medium: #A0B8D0;
+    /* Largeur de bordure globale */
+    --border-width: 4px;
+
+    /* Typographie */
+    --font-family-primary: Arial, Helvetica, system-ui, sans-serif;
+    --font-family-heading: 'Poppins', Arial, Helvetica, system-ui, sans-serif;
+
+    /* Tailles de police */
+    --font-size-xs: 0.875rem;
+    --font-size-sm: clamp(0.875rem, 0.8rem + 0.5vw, 1rem);
+    --font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+    --font-size-lg: clamp(1.125rem, 1rem + 0.75vw, 1.25rem);
+    --font-size-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+    --font-size-2xl: clamp(1.5rem, 1.3rem + 1vw, 1.875rem);
+    --font-size-3xl: clamp(1.875rem, 1.6rem + 1.5vw, 2.25rem);
+    --font-size-4xl: clamp(2.25rem, 1.9rem + 2vw, 3rem);
+    --font-size-5xl: clamp(3rem, 2.5rem + 2.5vw, 4rem);
+
+    /* Poids de police */
+    --font-weight-normal: 400;
+    --font-weight-medium: 600;
+    --font-weight-bold: 700;
+
+    /* Hauteur de ligne */
+    --line-height-tight: clamp(1.2, 1.1 + 0.1vw, 1.3);
+    --line-height-normal: clamp(1.5, 1.4 + 0.1vw, 1.6);
+    --line-height-relaxed: clamp(1.6, 1.5 + 0.15vw, 1.75);
+
+    /* Espacements */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+
+    /* Rayons de bordure */
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 0.75rem;
+    --border-radius-xl: 1rem;
+    --border-radius-2xl: 1.5rem;
+    --border-radius-full: 9999px;
+    /* Alias par défaut pour compatibilité avec les usages existants */
+    --border-radius: var(--border-radius-lg);
+
+    /* Ombres - basées sur #1E3A5F (30, 58, 95) */
+    --shadow-sm: 0 1px 2px 0 rgba(30, 58, 95, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(30, 58, 95, 0.15), 0 2px 4px -2px rgba(30, 58, 95, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(30, 58, 95, 0.15), 0 4px 6px -4px rgba(30, 58, 95, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(30, 58, 95, 0.15), 0 8px 10px -6px rgba(30, 58, 95, 0.1);
+
+    /* Ombres de texte */
+    --text-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --text-shadow-md: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.2s ease;
+
+    /* Z-index */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-tooltip: 1060;
+
+    /* Breakpoints */
+    --breakpoint-xl: 1280px;
+    --header-height: 70px;
+
+    /* Alias et couleurs complémentaires */
+    --color-border: var(--color-border-light);
+    --color-text-muted: var(--color-gray-600);
+
+    /* Alias de graisse manquante dans les styles */
+    --font-weight-semibold: 600;
+
+    /* Couleur highlight pour badges bonus */
+    --color-highlight: #FFD966;
+}
+
+/* ========================================
+   RESET ET BASE
+   ======================================== */
+
+/* Box sizing pour tous les éléments */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Éviter le scroll horizontal global */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Scroll smooth pour la navigation */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset des marges et paddings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset des listes - Éviter les doubles puces */
+/* Suppression des puces par défaut pour toutes les listes */
+ul, ol {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Style uniforme pour toutes les listes ul */
+ul li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1em;
+    height: 1em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%231E3A5F'%3E%3Cpolygon points='16,18 22,12 16,6 8,6 2,12 8,18'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Interdiction de l'alignement justifié pour le texte */
+*[style*="text-align: justify"],
+.text-justify,
+[class*="justify"] {
+    text-align: left !important;
+}
+
+/* Règle générale pour empêcher l'alignement justifié */
+p, div, span, article, section, main, aside, header, footer, nav, h1, h2, h3, h4, h5, h6, li, td, th {
+    text-align: left;
+}
+
+/* Exceptions pour les éléments qui doivent être centrés */
+.section-title, .btn, .hero-actions, .hero-benefits.center, .hero-benefits[style*="text-align: center"], .mini-footer, .mini-footer p {
+    text-align: center;
+}
+
+.hero-benefits.right, .hero-benefits[style*="text-align: right"] {
+    text-align: right;
+}
+
+
+/* Style uniforme pour toutes les listes ol */
+ol {
+    list-style: decimal;
+    padding-left: var(--spacing-lg);
+    margin: var(--spacing-sm) 0;
+}
+
+ol li {
+    margin-bottom: 0.5em;
+}
+
+/* Espacement des éléments de liste */
+li {
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Reset des liens — géré plus bas dans la section Typographie */
+
+/* Reset des boutons */
+button {
+    border: none;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* Reset des inputs */
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Reset des images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================================
+   TYPOGRAPHIE
+   ======================================== */
+
+/* Chargement des polices locales */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins-regular.woff2') format('woff2'),
+    local('Poppins Regular'), local('Poppins');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins-bold.woff2') format('woff2'),
+    local('Poppins Bold'), local('Poppins');
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* Base typographique */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-size: clamp(16px, 1.125rem, 18px); /* Taille fluide entre 16-18px */
+    line-height: 1.6; /* Interlignage optimisé */
+    color: var(--color-primary);
+    background-color: var(--color-bg-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Configuration des polices - Éléments en gras */
+strong, b {
+    font-family: var(--font-family-primary);
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Titres en gras */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-family: var(--font-family-heading);
+    font-display: swap;
+}
+
+/* Éléments de navigation et boutons en gras */
+.nav-link, .dropdown-toggle, .dropdown-link, .btn, .btn-primary {
+    font-weight: 700;
+    font-family: var(--font-family-primary);
+}
+
+/* Classes utilitaires pour le gras */
+.bold, .font-bold, .font-weight-bold {
+    font-weight: 700;
+    font-family: var(--font-family-primary);
+}
+
+/* Taille de police minimum pour l'accessibilité */
+small, .text-xs, .text-sm, .meta-item, .priority {
+    font-size: 1rem; /* Minimum 16px */
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-primary);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+h1 {
+    font-size: var(--font-size-4xl);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: var(--font-size-3xl);
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: var(--font-size-2xl);
+    line-height: 1.3;
+}
+
+h4 {
+    font-size: var(--font-size-xl);
+    line-height: 1.3;
+}
+
+h5 {
+    font-size: var(--font-size-lg);
+    line-height: 1.3;
+}
+
+h6 {
+    font-size: var(--font-size-base);
+    line-height: 1.3;
+}
+
+/* Paragraphes */
+p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+    line-height: 1.6; /* Interlignage cohérent avec le body */
+}
+
+/* Héritage de taille pour les spans dans les titres */
+@media (min-width: 1024px) {
+    h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+        font-size: inherit;
+    }
+}
+
+/* Liens */
+/* TOTDO style les liens de manière originale */
+a {
+    color: var(--color-primary);
+    transition: color var(--transition-fast);
+}
+
+/* Liens dans les cartes de la section outils */
+.card ul li a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--color-primary-light);
+    transition: all var(--transition-fast);
+}
+
+.card ul li a:hover {
+    color: var(--color-secondary);
+    text-decoration-color: var(--color-secondary);
+    text-decoration-thickness: 2px;
+}
+
+/* Icônes des cartes */
+.card-icon {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.card-icon .icon {
+    color: var(--color-primary);
+}
+
+/* Dates des phases */
+.phase-dates {
+    color: var(--color-accent);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    padding: var(--spacing-sm);
+    background: var(--color-bg-light);
+    border-radius: var(--border-radius);
+    border-left: var(--border-width) solid var(--color-accent);
+}
+
+/* Styles pour les listes dans les cartes */
+.card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card ul li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.card ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1em;
+    height: 1em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231B3A2D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='16,18 22,12 16,6'/%3E%3Cpolyline points='8,6 2,12 8,18'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Les puces personnalisées globales couvrent aussi .card */
+
+
+/* Dé-doublonnage: styles de liens déjà définis plus haut */
+
+/* Éléments recommandés avec icône étoile */
+.card ul li.recommended {
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.card ul li.recommended::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1em;
+    height: 1em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Styles pour les tableaux */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--spacing-md) 0;
+    background: var(--color-white);
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin: var(--spacing-md) 0;
+}
+
+.table-responsive:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+.table-responsive table {
+    margin: 0;
+}
+
+.evaluation-table {
+    min-width: 640px;
+}
+
+th, td {
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-align: left;
+}
+
+th {
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.evaluation-table tbody tr:nth-child(odd) {
+    background: var(--color-primary-very-light);
+}
+
+.evaluation-table tbody tr:nth-child(even) {
+    background: var(--color-white);
+}
+
+.evaluation-table tbody tr:hover {
+    background: var(--color-bg-light);
+}
+
+.evaluation-cards {
+    display: none;
+}
+
+.evaluation-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.evaluation-card-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.evaluation-card-header h4 {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    color: var(--color-primary);
+}
+
+.evaluation-card-points {
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: var(--font-size-base);
+}
+
+.evaluation-card-focus,
+.evaluation-card-expected {
+    margin: 0 0 var(--spacing-sm);
+    color: var(--color-text);
+    line-height: var(--line-height-normal);
+}
+
+.evaluation-card-expected {
+    margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+    .table-responsive {
+        display: none;
+    }
+
+    .evaluation-cards {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-md);
+    }
+}
+
+/* Colonnes spécifiques */
+.jalon-phase {
+    font-weight: 600;
+    color: var(--color-primary);
+    width: 30%;
+    vertical-align: top;
+}
+
+.jalon-dates {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-weight: normal;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.jalon-content {
+    width: 70%;
+}
+
+/* Responsive pour les tableaux */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .evaluation-table {
+        min-width: 520px;
+    }
+
+    .jalon-phase {
+        width: 35%;
+    }
+
+    .jalon-content {
+        width: 65%;
+    }
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   LAYOUT ET CONTAINERS
+   ======================================== */
+
+/* Scroll offset pour les ancres */
+html {
+    scroll-padding-top: var(--header-height);
+}
+
+/* Alternative pour les navigateurs qui ne supportent pas scroll-padding-top */
+[id] {
+    scroll-margin-top: var(--header-height);
+}
+
+/* Wrapper principal qui contient tout le contenu */
+.main-wrapper {
+    margin-left: 0; /* Pas de marge par défaut */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: margin-left var(--transition-normal);
+}
+
+/* ------------------------------------------------------------
+   Disposition du contenu vs. sidebar (desktop)
+   - Le state d'ouverture est piloté par la checkbox #nav-toggle
+   - Quand coché: la sidebar est visible et le contenu est décalé
+   - Quand décoché: la sidebar est masquée et le contenu reprend toute la largeur
+   ------------------------------------------------------------ */
+@media (min-width: 769px) {
+    .nav-toggle:checked ~ .main-wrapper {
+        margin-left: 250px;
+    }
+
+    .nav-toggle:not(:checked) ~ .main-wrapper {
+        margin-left: 0;
+    }
+}
+
+/* Le header reste toujours à la même position (voir bloc .main-header plus bas) */
+
+/* Container principal */
+.container {
+    padding: 0;
+    flex: 1; /* Prendre l'espace restant */
+    margin-top: var(--header-height); /* Éviter que le contenu soit caché sous le header fixe */
+}
+
+/* Limitation de largeur pour le contenu des sections */
+.section-content {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0; /* Padding géré par les sections */
+    box-sizing: border-box;
+}
+
+/* Section hero simplifiée */
+.hero .section-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+    .header-logo .logo-title {
+        font-size: var(--font-size-base);
+    }
+
+    .header-logo .logo-subtitle {
+        font-size: var(--font-size-xs);
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    /* Ajustement des sections sur mobile */
+    section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+
+    .section-title {
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+/* Skip link pour l'accessibilité */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 6px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-decoration: none;
+    border-radius: var(--border-radius-md);
+    z-index: var(--z-tooltip);
+    transition: top var(--transition-fast);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.skip-link:focus {
+    top: 6px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* ========================================
+   HEADER PRINCIPAL
+   ======================================== */
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-sticky);
+    height: var(--header-height);
+    background: var(--color-white);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo .logo-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.header-logo .logo-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.header-logo .logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-logo .logo-title {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    line-height: 1.2;
+}
+
+.header-logo .logo-subtitle {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    line-height: 1.2;
+}
+
+/* ========================================
+   BURGER MENU
+   - Le bouton <button>.burger-menu contrôle la checkbox #nav-toggle
+   - L'animation des 3 lignes se base sur l'état :checked de la checkbox
+   ======================================== */
+
+/* Checkbox de contrôle du menu (élément d'état, visuellement caché) */
+.nav-toggle, label[for="nav-toggle"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+}
+
+.burger-menu {
+    display: flex; /* Affiché sur toutes les tailles d'écran */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    gap: 4px;
+}
+
+.burger-menu:focus {
+    outline: none;
+}
+
+.burger-line {
+    width: 24px;
+    height: 3px;
+    background: var(--color-primary);
+    border-radius: 2px;
+    transition: all var(--transition-normal);
+    transform-origin: center;
+}
+
+/* Animation du burger menu quand ouvert (toutes largeurs)
+   basée sur l'état de la checkbox #nav-toggle */
+.nav-toggle:checked ~ .main-header .burger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle:checked ~ .main-header .burger-line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.nav-toggle:checked ~ .main-header .burger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ========================================
+   MENU VERTICAL STICKY
+   ======================================== */
+
+.sidebar-nav {
+    position: fixed;
+    left: 0;
+    top: var(--header-height);
+    height: calc(100vh - var(--header-height));
+    width: 250px;
+    background: var(--color-white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: calc(var(--z-sticky) - 1); /* sous le header */
+    overflow: hidden;
+    transform: translateX(0); /* Visible par défaut sur grand écran */
+    transition: transform var(--transition-normal);
+}
+
+/* ------------------------------------------------------------
+   Mobile: la sidebar est hors-canvas par défaut et recouvre le contenu
+   Quand .nav-toggle:checked, la sidebar glisse en vue
+   ------------------------------------------------------------ */
+@media (max-width: 768px) {
+    .sidebar-nav {
+        top: var(--header-height); /* sous le header */
+        height: calc(100vh - var(--header-height)); /* hauteur restante */
+        width: 100vw; /* pleine largeur */
+        border-right: none;
+        z-index: calc(var(--z-sticky) - 1); /* sous le header */
+        transform: translateX(-100%); /* Caché par défaut sur mobile */
+    }
+
+    /* Ouvrir le menu quand la checkbox est cochée */
+    .nav-toggle:checked ~ .sidebar-nav {
+        transform: translateX(0);
+    }
+}
+
+/* Desktop: permettre l'ouverture/fermeture de la sidebar */
+@media (min-width: 769px) {
+    /* Par défaut le menu peut être masqué quand non coché */
+    .nav-toggle:not(:checked) ~ .sidebar-nav {
+        transform: translateX(-250px);
+    }
+
+    .nav-toggle:checked ~ .sidebar-nav {
+        transform: translateX(0);
+    }
+}
+
+
+.sidebar-menu {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.sidebar-menu li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* Lien "Fermer le menu" (visible uniquement sur grand écran) */
+.sidebar-close-item {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .sidebar-close-item {
+        display: block;
+    }
+}
+
+.sidebar-menu li::before,
+.sidebar-menu li::after {
+    display: none !important;
+    content: none !important;
+}
+
+
+.sidebar-link {
+    --link-fill: 0%;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-sm);
+    transition: background-color var(--transition-normal), color var(--transition-normal);
+    list-style: none !important;
+    border: none !important;
+    outline: none !important;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.link-text {
+    transition: opacity var(--transition-normal);
+}
+
+.sidebar-link::before {
+    display: none !important;
+    content: none !important;
+}
+
+.sidebar-link::after {
+    content: '' !important;
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--link-fill);
+    height: 100%;
+    background-color: var(--color-bg-medium);
+    transition: width var(--transition-normal);
+    z-index: 0;
+}
+
+.sidebar-link > * {
+    position: relative;
+    z-index: 1;
+}
+
+.sidebar-link:hover,
+.sidebar-link:focus {
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+    border: none !important;
+    outline: none !important;
+}
+
+.sidebar-link.is-progress:hover,
+.sidebar-link.is-progress:focus,
+.sidebar-link.is-complete:hover,
+.sidebar-link.is-complete:focus {
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+.sidebar-link:active {
+    background-color: rgba(255, 140, 0, 0.18);
+    border: none !important;
+    outline: none !important;
+}
+
+.sidebar-link.active {
+    font-weight: var(--font-weight-bold);
+    border: none !important;
+    outline: none !important;
+}
+
+.sidebar-link.is-progress {
+    background-color: transparent;
+}
+
+.sidebar-link.is-complete {
+    background-color: transparent;
+    color: var(--color-text);
+}
+
+.sidebar-link i {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Lien de fermeture en couleur secondaire (texte + icône) */
+.sidebar-close-item .sidebar-link,
+.sidebar-close-item .sidebar-link:visited {
+    color: var(--color-secondary);
+}
+
+.sidebar-close-item .sidebar-link:hover,
+.sidebar-close-item .sidebar-link:focus {
+    color: var(--color-secondary);
+}
+
+.sidebar-close-item .sidebar-link:active {
+    color: var(--color-secondary);
+}
+
+/* ========================================
+   CONTENU DE LA SIDEBAR
+   ======================================== */
+
+.sidebar-content {
+    padding: 10px 0 0 0;
+    transition: opacity var(--transition-normal), visibility var(--transition-normal);
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ========================================
+   EN-TÊTE DU MENU
+   ======================================== */
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border-light);
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.sidebar-title {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+}
+
+
+/* ========================================
+   SECTIONS PRINCIPALES
+   ======================================== */
+
+/* Section Hero */
+.hero {
+    background: var(--color-primary);
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Style pour les li avec icônes manuelles */
+li.manual-icons {
+    position: relative;
+    padding-left: 1.5em !important;
+    margin-bottom: 0.5em;
+}
+
+li.manual-icons::before {
+    display: none;
+}
+
+li.manual-icons i {
+    position: absolute;
+    left: 0.2em;
+    top: 0.1em;
+    width: 1em;
+    height: 1em;
+    color: var(--color-primary);
+}
+
+li.manual-icons svg {
+    position: absolute;
+    top: 0.1em;
+    left: calc(-1.5em + 24px);
+}
+
+.hero-info {
+    padding: var(--spacing-lg);
+}
+
+/* Icônes orange pour le hero */
+.hero-info li.manual-icons svg {
+    color: var(--color-accent) !important;
+}
+
+/* Icônes orange pour les tâches du hero */
+.hero-tasks li.manual-icons svg {
+    color: var(--color-accent) !important;
+}
+
+/* Supprimer les ::before pour les éléments de checklist */
+li.checklist-item::before {
+    display: none;
+}
+
+.hero-tasks {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-md) 0;
+    backdrop-filter: blur(10px);
+    border: var(--border-width) solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-tasks h2 {
+    color: var(--color-white);
+    margin: 0 0 var(--spacing-md) 0;
+}
+
+.hero-tasks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-tasks li {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-sm);
+    padding-left: var(--spacing-lg);
+    position: relative;
+}
+
+.hero-tasks li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: var(--font-weight-bold);
+}
+
+.hero-title {
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.highlight {
+    color: var(--color-accent);
+}
+
+.hero-description {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-white);
+    text-align: center;
+}
+
+
+.hero-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: var(--spacing-xl) 0 0;
+}
+
+
+/* Carte vitrée réutilisable */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-lg);
+    backdrop-filter: blur(10px);
+    border: var(--border-width) solid rgba(255, 255, 255, 0.2);
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+}
+
+.info-icon {
+    flex-shrink: 0;
+    color: var(--color-accent);
+}
+
+.info-content h3 {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    margin: 0 0 var(--spacing-xs) 0;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.info-content p {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    margin: 0;
+    color: var(--color-white);
+}
+
+/* Section des tâches du projet */
+.project-tasks {
+    margin: var(--spacing-xl) 0;
+    padding: var(--spacing-xl);
+}
+
+.project-tasks h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    margin: 0 0 var(--spacing-lg) 0;
+    color: var(--color-white);
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm) 0;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-white);
+    text-align: left;
+}
+
+.task-list .icon {
+    color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+/* Styles pour l'image de la hero section */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+.hero-illustration {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-xl);
+}
+
+
+/* ========================================
+   BOUTONS
+   ======================================== */
+
+/* Boutons unifiés */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    font-weight: 700;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    border: 3px solid transparent;
+    min-height: 44px;
+}
+
+.btn-primary {
+    color: var(--color-white);
+    border-color: transparent;
+    background: linear-gradient(to bottom, var(--color-accent), var(--color-accent-dark)) border-box;
+}
+
+.btn-primary:hover {
+    color: var(--color-white);
+    background: linear-gradient(to bottom, var(--color-accent-dark), var(--color-accent-dark)) border-box;
+}
+
+.btn-primary:focus {
+    outline: 3px solid var(--color-white);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px var(--color-accent-light);
+}
+
+.btn-primary:active {
+    background-color: var(--color-accent-dark);
+    transform: translateY(1px);
+}
+
+.btn-primary:disabled {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-white);
+    border: var(--border-width) solid var(--color-white);
+    text-shadow: var(--text-shadow-sm);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-bg-primary);
+    color: var(--color-primary);
+    text-shadow: none;
+}
+
+.btn-secondary:focus {
+    outline: 3px solid var(--color-white);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px var(--color-bg-primary);
+}
+
+.btn-secondary:active {
+    background-color: var(--color-bg-primary);
+    opacity: 0.8;
+    color: var(--color-primary);
+    transform: translateY(1px);
+}
+
+.btn-secondary:disabled {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-large {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    font-size: var(--font-size-lg);
+}
+
+
+/* ========================================
+   SECTIONS DE CONTENU (style minimal)
+   ======================================== */
+
+/* Section générique - style minimal sans bordures ni ombres */
+section {
+    padding: var(--spacing-2xl) var(--spacing-md);
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    scroll-margin-top: var(--header-height); /* alignement avec le header sticky */
+}
+
+.section-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-text-primary);
+}
+
+/* Sections avec fond alterné */
+.objectifs {
+    background-color: var(--color-bg-primary);
+}
+
+/* Alternance des couleurs de fond pour les sections */
+.section-bg-primary {
+    background-color: var(--color-bg-primary);
+}
+
+.section-bg-secondary {
+    background-color: var(--color-bg-secondary);
+}
+
+.section-bg-medium {
+    background-color: var(--color-bg-medium);
+}
+
+/* Couleurs de fond spécifiques pour chaque section (supprimées car non utilisées dans index.html) */
+
+/* Grilles uniformes pour toutes les sections de cartes */
+.objectifs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+
+/* ========================================
+   CARTES D'ARTICLES (style carte conservé)
+   ======================================== */
+
+/* Cartes unifiées pour les articles - style carte avec bordures et ombres */
+.livrable-card, .resource-card, .consigne-card, article {
+    background: var(--color-white);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-md);
+    border: var(--border-width) solid var(--color-primary);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.livrable-card:hover, .resource-card:hover, .consigne-card:hover, article:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-accent);
+}
+
+
+.livrable-icon {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+}
+
+.livrable-card h3, article h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-xs);
+}
+
+.livrable-card ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.livrable-card ul li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Dé-doublonnage: utilise la variante avec coche définie plus bas */
+
+.livrable-card li {
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.livrable-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: var(--font-weight-bold);
+    margin-right: var(--spacing-md);
+}
+
+/* Listes dans les cartes - styles unifiés */
+.resource-card ul, .consigne-card ul, article ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.resource-card ul li, .consigne-card ul li, article ul li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.4em;
+}
+
+/* Paragraphes dans les cartes */
+article p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-secondary);
+}
+
+/* Dé-doublonnage: utilise la variante simple en puce ci-dessous */
+
+.resource-card li, .consigne-card li, article li {
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.resource-card li::before, .consigne-card li::before, article li::before, .timeline-card li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1em;
+    height: 1em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231B3A2D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='16,18 22,12 16,6'/%3E%3Cpolyline points='8,6 2,12 8,18'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ========================================
+   Ressources & outils — cartes masonry
+   ======================================== */
+
+.cards {
+    /* Fallback multi-colonnes : masonry accessible partout */
+    column-width: 350px;
+    column-count: 5;
+    column-gap: var(--spacing-xl);
+    width: 100%;
+    max-width: calc(5 * 400px + 4 * var(--spacing-xl));
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.cards .card {
+    display: inline-block;
+    width: clamp(350px, 100%, 400px);
+    margin: 0 0 var(--spacing-xl);
+    break-inside: avoid;
+    background: var(--color-white);
+    border: var(--border-width) solid var(--color-primary);
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.cards .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-accent);
+}
+
+/* Amélioration progressive : masonry grid natif lorsque supporté */
+@supports (grid-template-rows: masonry) {
+    .cards {
+        column-width: auto;
+        column-count: initial;
+        column-gap: 0;
+        display: grid;
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(auto-fill, minmax(350px, min(400px, 1fr)));
+        grid-template-rows: masonry;
+        gap: var(--spacing-xl);
+        justify-content: center;
+        padding: 0 var(--spacing-lg);
+    }
+
+    .cards .card {
+        display: block;
+        margin: 0;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 420px) {
+    .cards {
+        column-count: 1;
+        column-width: 100%;
+        padding: 0 var(--spacing-md);
+    }
+
+    .cards .card {
+        width: 100%;
+    }
+
+    @supports (grid-template-rows: masonry) {
+        .cards {
+            grid-template-columns: 1fr;
+            padding: 0 var(--spacing-md);
+        }
+    }
+}
+
+
+/* Section CTA */
+
+
+/* ========================================
+   MINI FOOTER
+   ======================================== */
+
+.mini-footer {
+    min-height: 200px;
+    background-color: var(--color-primary-darker);
+    color: var(--color-white);
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: center;
+    border-top: var(--border-width) solid var(--color-accent);
+}
+
+.mini-footer p {
+    color: var(--color-white);
+    margin: 0;
+    font-size: var(--font-size-sm);
+    opacity: 0.9;
+}
+
+.mini-footer img {
+    display: block;
+    margin: 0 auto var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    max-width: 800px;
+    margin-top: var(--spacing-2xl);
+}
+
+/* Liens du footer lisibles et accessibles sur fond sombre */
+.mini-footer a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.mini-footer a:hover {
+    text-decoration: underline;
+}
+
+.mini-footer a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* Safe-area pour iOS (barre système en bas) */
+.mini-footer {
+    padding-bottom: calc(var(--spacing-md) + env(safe-area-inset-bottom));
+}
+
+/* ========================================
+   UTILITAIRES
+   ======================================== */
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Badge bonus */
+.badge-bonus {
+    display: inline-block;
+    background: var(--color-highlight);
+    color: var(--color-dark);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    padding: 2px 8px;
+    border-radius: var(--border-radius-full);
+    margin-left: var(--spacing-sm);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1023px) {
+    .sidebar-nav {
+        display: block; /* Garder la sidebar visible sur mobile */
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Mobile First - Breakpoint SM (640px) */
+@media (max-width: 639px) {
+    .container {
+        padding: 0; /* Suppression du padding sur mobile */
+    }
+
+    /* Éviter le scroll horizontal sur mobile */
+    body {
+        overflow-x: hidden;
+    }
+
+    .section-content {
+        padding: 0; /* Padding géré par les sections */
+    }
+
+    .hero-info {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-tasks {
+        padding: var(--spacing-lg);
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+
+}
+
+/* Breakpoint MD (768px) */
+@media (max-width: 767px) {
+
+    .objectifs-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Breakpoint LG (1024px) */
+@media (min-width: 1024px) {
+    /* Règles spécifiques pour les grands écrans si nécessaire */
+}
+
+
+/* ========================================
+   TRANSITIONS UNIFIÉES
+   ======================================== */
+
+/* Transitions pour tous les éléments interactifs */
+.btn, .livrable-card, .resource-card, .consigne-card, article {
+    transition: all var(--transition-normal);
+}
+
+/* ========================================
+   ACCESSIBILITÉ
+   ======================================== */
+
+/* Focus visible - cohérent avec tous les éléments */
+*:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Focus pour les boutons */
+.btn:focus-visible {
+    outline: 3px solid var(--color-white);
+    outline-offset: 3px;
+}
+
+/* Focus pour les cartes */
+.livrable-card:focus-within, .resource-card:focus-within, .consigne-card:focus-within, article:focus-within {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 6px;
+    box-shadow: 0 0 0 6px var(--color-primary);
+}
+
+/* Focus pour les liens de navigation */
+.nav-link:focus, .dropdown-link:focus, .dropdown-toggle:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Réduction des animations pour les utilisateurs qui les préfèrent */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        transition-duration: 0.01ms;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Contraste élevé */
+@media (prefers-contrast: high) {
+    :root {
+        --color-border-light: var(--color-accent);
+        --color-border-medium: var(--color-accent);
+    }
+}
+
+
+/* ========================================
+   STYLES POUR LA PAGE UNIQUE
+   ======================================== */
+
+/* Styles pour les cartes et grilles - ne s'applique pas aux articles */
+.card:not(article) {
+    background: var(--color-white);
+    border: none;
+    border-radius: 0;
+    padding: var(--spacing-lg);
+    box-shadow: none;
+    transition: none;
+    margin-bottom: var(--spacing-lg);
+}
+
+.card:not(article):hover {
+    transform: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.card:not(article) h2, .card:not(article) h3 {
+    color: var(--color-primary);
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Grilles */
+.grid {
+    display: grid;
+    gap: var(--spacing-xl);
+    align-items: stretch; /* Cartes de même hauteur */
+}
+
+/* Espacement entre grilles successives */
+.grid + .grid {
+    margin-top: var(--spacing-xl);
+}
+
+.grid.cols-2 {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.grid.cols-3 {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.grid.cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Cartes dans les grilles - hauteur égale */
+.grid article,
+.grid .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.grid article h3,
+.grid .card h3 {
+    flex-shrink: 0;
+}
+
+.grid article ul,
+.grid .card ul {
+    flex-grow: 1;
+}
+
+.grid article p:last-child,
+.grid .card p:last-child {
+    margin-bottom: 0;
+}
+
+/* KPI et boîtes d'information */
+.kpi {
+    display: flex;
+    gap: var(--spacing-xl);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-xl);
+}
+
+/* ========================================
+   PLANIFICATION — TIMELINE VERTICALE
+   ======================================== */
+/* Supprimer le padding uniquement pour cette section afin que la ligne
+   verticale débute/finisse exactement aux bords visuels de la section */
+#planification {
+    position: relative;
+    --timeline-marker-size: 50px;
+}
+
+/* Ligne verticale rendue au niveau de la section pour couvrir toute la hauteur */
+#planification::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--timeline-marker-size) / 2);
+    width: calc(var(--timeline-marker-size) / 2);
+    background: var(--color-accent);
+    pointer-events: none;
+}
+
+.timeline {
+
+    position: none;
+    margin: var(--spacing-2xl) 0;
+    padding-left: calc(var(--timeline-marker-size) + var(--spacing-md));
+    list-style: none;
+}
+
+/* Aucune ligne interne sur la liste */
+.timeline::before {
+    display: none;
+}
+
+.timeline-item {
+    position: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+}
+
+.timeline-marker {
+    position: absolute;
+    margin-top: -4px;
+    left: calc(var(--timeline-marker-size) / 4);
+    width: var(--timeline-marker-size);
+    height: var(--timeline-marker-size);
+    border-radius: var(--border-radius-full);
+    background: var(--color-white);
+    border: var(--border-width) solid var(--color-primary);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+}
+
+.timeline-date {
+    align-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    color: var(--color-primary);
+    background: var(--color-bg-medium);
+    border: var(--border-width) solid var(--color-primary);
+    border-radius: var(--border-radius-full);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    width: max-content;
+}
+
+.timeline-card {
+    background: var(--color-white);
+    border: var(--border-width) solid var(--color-primary);
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-lg);
+}
+
+.timeline-card h3 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+}
+
+.timeline-card ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline-card li {
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    padding-left: 1.5em;
+}
+
+
+.box {
+    background: var(--color-bg-medium);
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    flex: 1;
+    min-width: 200px;
+}
+
+.muted {
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Chips et badges */
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.chip {
+    background: var(--color-bg-medium);
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius-full);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+/* ========================================
+   API BADGES - Affichage moderne des APIs
+   ======================================== */
+
+/* API Section dans le layout masonry */
+.cards .api-section {
+    display: inline-block;
+    width: clamp(350px, 100%, 400px);
+    margin: 0 0 var(--spacing-xl);
+    break-inside: avoid;
+}
+
+.api-section {
+    background: var(--color-white);
+    border: var(--border-width) solid var(--color-primary);
+    border-radius: var(--border-radius-xl);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.api-section:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-accent);
+}
+
+.api-section h3 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.api-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.api-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    border: 2px solid transparent;
+}
+
+/* API sans clé - Vert */
+.api-badge.no-key {
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    color: #2E7D32;
+    border-color: #81C784;
+}
+
+.api-badge.no-key:hover {
+    background: linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%);
+    border-color: #4CAF50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.api-badge.no-key.recommended {
+    background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+    color: #F57C00;
+    border-color: #FFB74D;
+}
+
+.api-badge.no-key.recommended:hover {
+    background: linear-gradient(135deg, #FFECB3 0%, #FFE082 100%);
+    border-color: #FF9800;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+}
+
+/* API avec clé - Bleu */
+.api-badge.with-key {
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+    color: #1565C0;
+    border-color: #64B5F6;
+}
+
+.api-badge.with-key:hover {
+    background: linear-gradient(135deg, #BBDEFB 0%, #90CAF9 100%);
+    border-color: #2196F3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+
+/* Thème de l'API */
+.api-badge .api-theme {
+    font-weight: var(--font-weight-normal);
+    opacity: 0.8;
+    font-size: 0.85em;
+}
+
+/* Icône dans le badge */
+.api-badge .api-icon {
+    font-size: 1.1em;
+}
+
+/* Section APIs à éviter */
+.api-avoid {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: #FFF3E0;
+    border: 2px solid #FFB74D;
+    border-radius: var(--border-radius-lg);
+}
+
+.api-avoid p {
+    margin: 0;
+    color: #E65100;
+    font-size: var(--font-size-sm);
+}
+
+.api-avoid strong {
+    color: #BF360C;
+}
+
+/* Grille des sections API */
+.api-sections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+@media (max-width: 500px) {
+    .api-sections-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .api-badge {
+        font-size: var(--font-size-xs);
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+}
+
+/* Code et monospace */
+.mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    background: var(--color-bg-medium);
+    border: 1px solid var(--color-border-light);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+}
+
+/* ========================================
+   CHECKLIST PROFESSIONNELLE
+   ======================================== */
+
+/* Container principal de la checklist */
+.checklist-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+    max-width: 100%;
+}
+
+/* Limiter à 2 colonnes maximum sur grands écrans */
+@media (min-width: 1200px) {
+    .checklist-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Catégorie de la checklist */
+.checklist-category {
+    background: var(--color-white);
+    border: var(--border-width) solid var(--color-border-light);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    transition: all var(--transition-normal);
+}
+
+.checklist-category:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.checklist-category h3 {
+    color: var(--color-primary);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-border-light);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.checklist-category h3::before {
+    content: "✓";
+    color: var(--color-accent);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-xl);
+}
+
+/* Liste des items */
+.checklist-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: 0;
+    padding: var(--spacing-sm);
+    transition: background-color var(--transition-fast);
+}
+
+.checklist-item:hover {
+    background-color: var(--color-bg-medium);
+}
+
+/* Checkbox personnalisée */
+.checklist-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius-sm);
+    background: var(--color-white);
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: all var(--transition-fast);
+}
+
+.checklist-checkbox:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px var(--color-accent-light);
+}
+
+.checklist-checkbox:checked {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.checklist-checkbox:checked::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    font-size: 12px;
+}
+
+/* Label de la checkbox */
+.checklist-label {
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    color: var(--color-text-primary);
+    flex: 1;
+    transition: color var(--transition-fast);
+    margin: 0;
+}
+
+.checklist-checkbox:checked + .checklist-label {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Barre de progression */
+.checklist-progress {
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 16px;
+    background: var(--color-bg-medium);
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius-full);
+    overflow: hidden;
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+    transition: width var(--transition-normal);
+    border-radius: var(--border-radius-full);
+}
+
+.progress-text {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    margin: 0;
+}
+
+/* Animation de completion */
+.checklist-item.completed {
+    background-color: var(--color-bg-medium);
+    border-left: none;
+
+    border-radius: 0;
+}
+
+.checklist-item.completed .checklist-label {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .checklist-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .checklist-category {
+        padding: var(--spacing-md);
+    }
+
+}
+
+/* Details et summary */
+details {
+    background: var(--color-white);
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+summary {
+    cursor: pointer;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+summary:hover {
+    color: var(--color-accent);
+}
+
+details[open] summary {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Responsive pour les grilles */
+@media (max-width: 1200px) {
+    .grid.cols-3 {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    .grid.cols-4 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid.cols-2,
+    .grid.cols-3,
+    .grid.cols-4 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Éviter le débordement des grilles sur mobile */
+    .grid {
+        gap: var(--spacing-md); /* Réduire l'espacement sur mobile */
+    }
+
+    /* S'assurer que les cartes ne débordent pas */
+    .card, .livrable-card, .resource-card, .consigne-card, article {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .kpi {
+        flex-direction: column;
+    }
+
+    .box {
+        min-width: auto;
+    }
+}
+
+/* ========================================
+   IMPRESSION
+   ======================================== */
+
+@media print {
+    .header,
+    .nav,
+    .mini-footer {
+        display: none;
+    }
+
+    .hero {
+        background: none;
+        color: var(--color-primary);
+    }
+
+    .hero-title {
+        color: var(--color-primary);
+    }
+
+    .project-info-grid {
+        background: none;
+        border: 1px solid var(--color-primary);
+    }
+
+    .glass-card {
+        background: none;
+        border: 1px solid var(--color-primary);
+        color: var(--color-primary);
+    }
+
+    .glass-card * {
+        color: var(--color-primary);
+    }
+
+    .btn {
+        display: none;
+    }
+
+    section {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .container {
+        padding: 0;
+    }
+}

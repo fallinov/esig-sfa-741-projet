@@ -1,0 +1,144 @@
+/* Styles pour les icônes Lucide - Design moderne et épuré */
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.icon-sm {
+    width: 0.875em;
+    height: 0.875em;
+}
+
+.icon-lg {
+    width: 1.33em;
+    height: 1.33em;
+}
+
+.icon-xl {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+/* Couleurs de la palette officielle pour les icônes */
+.icon-primary {
+    color: var(--color-primary);
+}
+
+/* Couleurs détaillées inutilisées retirées pour simplification */
+
+/* Icônes dans les cartes - Style moderne */
+.card-icon .icon {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Icônes dans les titres de section - Style épuré */
+.section-icon .icon {
+    font-size: 1.75rem;
+    color: var(--color-gray-600);
+    margin-right: 0.75rem;
+    opacity: 0.8;
+}
+
+/* Icônes dans les métadonnées - Style subtil */
+.meta-item .icon {
+    font-size: 1rem; /* 16px minimum */
+    margin-right: 0.375rem;
+    opacity: 0.7;
+}
+
+/* Icônes dans les boutons - Style intégré */
+.btn .icon {
+    margin-right: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.btn:hover .icon {
+    transform: scale(1.1);
+}
+
+/* Icônes dans la navigation - Style élégant */
+.nav-link .icon {
+    margin-right: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+/* Icônes avec animations subtiles */
+.icon-animated {
+    transition: all 0.3s ease;
+}
+
+.icon-animated:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Icônes avec ombres douces */
+.icon-shadow {
+    filter: drop-shadow(0 1px 2px rgba(139, 69, 19, 0.1));
+}
+
+/* Icônes dans les listes - Style harmonieux */
+.emoji-replacement .icon {
+    margin-right: 0.25rem;
+    vertical-align: -0.125em;
+}
+
+/* Icônes dans les timelines - Style cohérent */
+.timeline-item .icon {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-right: 0.5rem;
+}
+
+/* Icônes dans les footers - Style discret */
+.footer .icon {
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.footer .icon:hover {
+    opacity: 1;
+}
+
+/* Responsive design pour les icônes */
+@media (max-width: 768px) {
+    .card-icon .icon {
+        font-size: 2rem;
+    }
+    
+    .section-icon .icon {
+        font-size: 1.5rem;
+    }
+    
+    .icon-xl {
+        width: 1.25em;
+        height: 1.25em;
+    }
+}
+
+/* Mode sombre support (optionnel) */
+@media (prefers-color-scheme: dark) {
+    .icon-muted {
+        color: var(--color-gray-500);
+    }
+    
+    .icon-light {
+        color: var(--color-gray-700);
+    }
+    
+    .icon-dark {
+        color: var(--color-gray-100);
+    }
+}
+
+/* Styles pour l'icône du logo - supprimés car en conflit avec l'image PNG */
